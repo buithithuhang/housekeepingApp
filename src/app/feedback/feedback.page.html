@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="feedback">Phản hồi</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-row>
+        <ion-radio-group value="a">
+            <ion-item>
+              <ion-label>Sự cố</ion-label>
+              <ion-radio slot="start" value="suco"></ion-radio>
+
+              <ion-item>
+                <ion-label>Hư hỏng</ion-label>
+                <ion-radio slot="start" value="huhong"></ion-radio>
+              </ion-item>
+
+              <ion-item >
+                <ion-label>Khác</ion-label>
+                <ion-radio slot="start" value="khac"></ion-radio>
+              </ion-item> 
+
+            </ion-item>
+        </ion-radio-group>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">Nội dung</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-label position="floating">Mô tả</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+      <ion-label>Item Avatar</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-button expand="block">Gửi</ion-button>
+  </ion-card>
+</ion-content>

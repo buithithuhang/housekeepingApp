@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>room-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="floors">
+    <ion-item>
+      <ion-label>
+        Tầng:
+      </ion-label>
+      <ion-select>
+        <ion-select-option>Tầng 1</ion-select-option>
+        <ion-select-option>Tầng 2</ion-select-option>
+        <ion-select-option>Tầng 3</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Trạng thái phòng:</ion-label>
+      <ion-select>
+        <ion-select-option>Có người</ion-select-option>
+        <ion-select-option>Khách trong phòng</ion-select-option>
+        <ion-select-option>Khách ra ngoài</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Trạng thái dọn dẹp:</ion-label>
+      <ion-select>
+        <ion-select-option>Chưa dọn dẹp</ion-select-option>
+        <ion-select-option>Đang dọn dẹp</ion-select-option>
+        <ion-select-option>Đã dọn dẹp</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Trạng thái kiểm tra:</ion-label>
+      <ion-select>
+        <ion-select-option>Chưa kiểm tra</ion-select-option>
+        <ion-select-option>Đang kiểm tra</ion-select-option>
+        <ion-select-option>Đã kiểm tra</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  <div class="room-list">
+    <ion-card *ngFor="let r of rooms">
+      <ion-card-header>
+        <ion-card-subtitle>P101 - <small>Vip</small> </ion-card-subtitle>
+        <ion-card-title>Tầng 1</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+          <ion-list>
+            <ion-item style="border: none;"> 
+              <ion-button fill="outline"  >   <ion-icon name="person-circle-outline"></ion-icon></ion-button>
+              <ion-select style="width: 100%;padding-left: 1rem;"> 
+                <ion-select-option value="brown" selected="true">Brown</ion-select-option>
+                <ion-select-option value="blonde">Blonde</ion-select-option>
+                <ion-select-option value="black">Black</ion-select-option>
+                <ion-select-option value="red">Red</ion-select-option>
+              </ion-select>
+            </ion-item>
+            
+            <ion-item> 
+              <ion-button fill="outline">
+                <ion-icon name="color-wand-sharp"></ion-icon>
+            </ion-button>
+              <ion-select style="width: 100%;padding-left: 1rem;">
+                <ion-select-option value="brown" selected="true">Brown</ion-select-option>
+                <ion-select-option value="blonde">Blonde</ion-select-option>
+                <ion-select-option value="black">Black</ion-select-option>
+                <ion-select-option value="red">Red</ion-select-option>
+              </ion-select>
+            </ion-item>
+            
+            <ion-item> 
+              <ion-button fill="outline">
+                <ion-icon name="checkmark-done-outline"></ion-icon>
+            </ion-button>
+              <ion-select style="width: 100%;padding-left: 1rem;"> 
+                <ion-select-option value="brown" selected="true">Brown</ion-select-option>
+                <ion-select-option value="blonde">Blonde</ion-select-option>
+                <ion-select-option value="black">Black</ion-select-option>
+                <ion-select-option value="red">Red</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

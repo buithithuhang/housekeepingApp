@@ -1,19 +1,17 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { TabsPage } from './tabs.page';
+import { Routes, RouterModule } from '@angular/router';
+
+import { ManagerPage } from './manager.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
-    component: TabsPage,
+    path: '',
+    component: ManagerPage,
     children: [
       {
-        path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
-      },
-      {
-        path: 'login',
-        loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
+        path: '',
+        redirectTo: 'job-list',
+        pathMatch: 'full'
       },
       {
         path: 'job-list',
@@ -55,23 +53,12 @@ const routes: Routes = [
         path: 'room-list',
         loadChildren: () => import('../room-list/room-list.module').then(m => m.RoomListPageModule)
       },
-      
-      {
-        path: '',
-        redirectTo: '/tabs/tab1',
-        pathMatch: 'full'
-      }
     ]
-  },
-  {
-    path: '',
-    redirectTo: '/tabs/tab1',
-    pathMatch: 'full'
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class TabsPageRoutingModule {}
+export class ManagerPageRoutingModule {}
