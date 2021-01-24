@@ -7,14 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { JobListPageRoutingModule } from './job-list-routing.module';
 
 import { JobListPage } from './job-list.page';
+import { JobListService } from './job-list.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    JobListPageRoutingModule
+    JobListPageRoutingModule,
+    HttpClientModule
   ],
-  declarations: [JobListPage]
+  declarations: [JobListPage],
+  providers: [JobListService]
 })
 export class JobListPageModule {}

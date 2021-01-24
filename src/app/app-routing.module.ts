@@ -23,10 +23,6 @@ const routes: Routes = [
     loadChildren: () => import('./detail-cleaning-check/detail-cleaning-check.module').then( m => m.DetailCleaningCheckPageModule)
   },
   {
-    path: 'room-list',
-    loadChildren: () => import('./room-list/room-list.module').then( m => m.RoomListPageModule)
-  },
-  {
     path: 'notify',
     loadChildren: () => import('./notify/notify.module').then( m => m.NotifyPageModule)
   },
@@ -42,14 +38,6 @@ const routes: Routes = [
     path: 'clean-list',
     loadChildren: () => import('./clean-list/clean-list.module').then( m => m.CleanListPageModule)
   },
-  {
-    path: 'employee-list',
-    loadChildren: () => import('./employee-list/employee-list.module').then( m => m.EmployeeListPageModule)
-  },
-  {
-    path: 'assignment',
-    loadChildren: () => import('./assignment/assignment.module').then( m => m.AssignmentPageModule)
-  }
 ];
 @NgModule({
   imports: [

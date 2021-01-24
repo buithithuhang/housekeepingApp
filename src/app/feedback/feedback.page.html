@@ -8,7 +8,7 @@
   <ion-card>
     <ion-card-content>
       <ion-row>
-        <ion-radio-group value="a">
+        <ion-radio-group class="radio" value="a">
             <ion-item>
               <ion-label>Sự cố</ion-label>
               <ion-radio slot="start" value="suco"></ion-radio>
@@ -36,23 +36,12 @@
     </ion-item>
   </ion-card>
 
-  <ion-card>
-    <ion-item>
-      <ion-label position="floating">Mô tả</ion-label>
-      <ion-textarea></ion-textarea>
+  <ion-card class="description">
+    <ion-item >
+      <ion-label class="tex" position="floating">Mô tả</ion-label>
+      <ion-textarea ></ion-textarea>
     </ion-item>
   </ion-card>
-
-  <ion-card>
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-      </ion-avatar>
-      <ion-label>Item Avatar</ion-label>
-    </ion-item>
-  </ion-card>
-
-  <ion-card>
-    <ion-button expand="block">Gửi</ion-button>
-  </ion-card>
+    <ion-button class="button" color="success" >Gửi</ion-button>
+  
 </ion-content>

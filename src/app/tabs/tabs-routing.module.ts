@@ -8,10 +8,6 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
-        loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
-      },
-      {
         path: 'login',
         loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
       },
@@ -42,18 +38,6 @@ const routes: Routes = [
       {
         path: 'hotel-list',
         loadChildren: () => import('../hotel-list/hotel-list.module').then(m => m.HotelListPageModule)
-      },
-      {
-        path: 'assignment',
-        loadChildren: () => import('../assignment/assignment.module').then(m => m.AssignmentPageModule)
-      },
-      {
-        path: 'employee-list',
-        loadChildren: () => import('../employee-list/employee-list.module').then(m => m.EmployeeListPageModule)
-      },
-      {
-        path: 'room-list',
-        loadChildren: () => import('../room-list/room-list.module').then(m => m.RoomListPageModule)
       },
       
       {

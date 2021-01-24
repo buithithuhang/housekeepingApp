@@ -1,63 +1,61 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Khách sạn Cherry</ion-title>
+    <ion-title style="text-align: center;">Danh sách dọn dẹp</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="detail">
     <ion-card-content>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-          </ion-col>
-          <ion-col>
-          </ion-col>
-          <ion-col>
-            Ngày dọn dẹp: 11/01/2020
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col>
-           Tầng 1
-          </ion-col>
-          <ion-col>
-            <p class="room">P101</p>
-          </ion-col>
-          <ion-col>
-            Thời gian bắt đầu: 9:30 AM
-          </ion-col>
-        </ion-row>
-
-        <ion-row>
-          <ion-col>
-          </ion-col>
-          <ion-col>
-          </ion-col>
-          <ion-col>
-            Thời gian kết thúc: 10:30 AM
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-text color="dark">
+            <h2 style="font-weight: bold;">P101</h2>
+          </ion-text>
+          Tầng 1
+        </ion-col>
+        <ion-col size="8" style="text-align: right;">
+        Ngày dọn dẹp: 11/01/2020
+          <br />
+          Thời gian bắt đầu: 9:30 AM
+          <br />
+          Thời gian kết thúc: 10:30 AM
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <b>
+            <!-- <ion-icon color="medium" name="checkmark-outline"></ion-icon> -->
+            <ion-icon style="color: #000;" name="logo-tableau" size="medium"></ion-icon>
+          Chưa dọn dẹp
+          </b>
+          <ion-icon style="color: orange;" name="logo-tableau"></ion-icon>
+          Đang dọn dẹp
+          <ion-icon style="color: green;" name="logo-tableau"></ion-icon>
+          Đã dọn dẹp
+        </ion-col>
+      </ion-row>
     </ion-card-content>
-
+  </div>
+  <div class="detail">
     <ion-card-content>
-    <p> Danh sách cần dọn dẹp</p>
-    <ion-list>
-      <ion-item *ngFor="let entry of form">
-        <ion-label>{{entry.name}}</ion-label>
-        <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
-      </ion-item>
-    </ion-list>
-    <p class="note"> Lưu ý: Trong lúc dọn dẹp không được tự ý di chuyển và lấy đồ dùng của khách hàng! </p>
+      <p style="text-align: center;">CÔNG VIỆC</p>
+      
+      <ion-list class="checked">
+        <ion-item *ngFor="let entry of form">
+          <ion-label>{{entry.name}}</ion-label>
+          <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+      <p class="note"> Lưu ý: Trong lúc dọn dẹp không được tự ý di chuyển và lấy đồ dùng của khách hàng! </p>
     </ion-card-content>
-    <ion-card>
-      <ion-button>
-        Hoàn tất
-      </ion-button>
-      <ion-button>
-        <ion-icon name="add-circle-sharp"></ion-icon>
-      </ion-button>
-    </ion-card>
-    
+  </div>
+  <ion-card>
+    <ion-button>
+      Hoàn tất
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/feedback']">
+      <ion-icon name="add-circle-sharp"></ion-icon>
+    </ion-button>
+  </ion-card>
 </ion-content>

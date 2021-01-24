@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Khách sạn Cherry</ion-title>
+    <ion-title>Danh sách kiểm tra</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -45,6 +45,25 @@
     </ion-card-content>
 
     <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-icon style="color: grey;" name="checkmark-done-outline"></ion-icon>
+            Chưa kiểm tra
+          </ion-col>
+          <ion-col>
+            <ion-icon style="color: orange;" name="checkmark-done-outline"></ion-icon>
+            Đang kiểm tra
+          </ion-col>
+          <ion-col>
+            <ion-icon style="color: green;" name="checkmark-done-outline"></ion-icon>
+            Đã kiểm tra
+          </ion-col>
+        </ion-row>        
+      </ion-grid>
+    </ion-card-content>
+
+    <ion-card-content>
     <p> Danh sách cần dọn dẹp</p>
     <ion-list>
       <ion-item *ngFor="let entry of form">
@@ -58,7 +77,7 @@
       <ion-button>
         Hoàn tất
       </ion-button>
-      <ion-button>
+      <ion-button [routerLink]="['/tabs/feedback']">
         <ion-icon name="add-circle-sharp"></ion-icon>
       </ion-button>
     </ion-card>

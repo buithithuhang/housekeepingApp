@@ -7,14 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailCleaningCheckPage implements OnInit {
   form = [
-    {name: 'Thay ga giường, vỏ gối', isChecked: false},
-    {name: 'Quét mạng nhện', isChecked: false},
-    {name: 'Lau bàn ghế', isChecked: false},
-    {name: 'Lau sàn nhà', isChecked: false},
-    {name: 'Lau cửa chính, cửa sổ', isChecked: false},
-    {name: 'Bổ sung giấy vệ sinh ở phòng tắm (Nếu hết)', isChecked: false},
-    {name: 'Bổ sung kem đánh răng', isChecked: false},
-    {name: 'Lau sàn nhà', isChecked: false},
+    {name: 'Kiểm tra sàn nhà', isChecked: false},
+    {name: 'Kiểm tra ga giường, vỏ gối', isChecked: false},
+    {name: 'Kiểm tra bàn ghế', isChecked: false},
+    {name: 'Kiểm tra đồ dùng trong phòng', isChecked: false},
+    {name: 'Kiểm tra nhà vệ sinh', isChecked: false},
   ];
   constructor() { }
 
